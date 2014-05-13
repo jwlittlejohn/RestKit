@@ -114,11 +114,11 @@ NSString *RKPathFromPatternWithObject(NSString *pathPattern, id object)
 {
     NSAssert(self.socPattern != NULL, @"Matcher has no established pattern.  Instantiate it using pathMatcherWithPattern: before attempting a pattern match.");
     NSMutableDictionary *argumentsCollection = [NSMutableDictionary dictionary];
-    if ([self bifurcateSourcePathFromQueryParameters]) {
-        if (shouldTokenize) {
-            [argumentsCollection addEntriesFromDictionary:self.queryParameters];
-        }
-    }
+//    if ([self bifurcateSourcePathFromQueryParameters]) {
+//        if (shouldTokenize) {
+//            [argumentsCollection addEntriesFromDictionary:self.queryParameters];
+//        }
+//    }
     if (![self matches]) return NO;
     if (!arguments) return YES;
     NSDictionary *extracted = [self.socPattern parameterDictionaryFromSourceString:self.rootPath];
